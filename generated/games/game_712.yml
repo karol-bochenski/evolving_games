@@ -1,0 +1,31 @@
+dimensions: 4x9
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: FF
+    - hop: FRR
+    - hop: BR
+    - canAttack: true
+      hop: RR
+- '2':
+    moves:
+    - hop: BBB
+    - canAttack: true
+      hop: FRR
+    - leap: B
+    - canAttack: true
+      hop: FFF
+- '3':
+    moves:
+    - canAttack: true
+      hop: FRR
+placement: 0030 2132 2132 0111
+player2mirrored: true
+winConditions:
+  or:
+  - piecePlacedAt:
+      6: 0,1
+      7: 0,1
+      8: 0,1
+  - EnemyTotalPiecesLeft: 1

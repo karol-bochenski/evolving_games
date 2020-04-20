@@ -1,0 +1,45 @@
+dimensions: 10x10
+pieces:
+- '1':
+    moves:
+    - slide: R
+    - hop: FRR
+- '2':
+    moves:
+    - canAttack: true
+      hop: RR
+    - leap: BR
+- '3':
+    moves:
+    - slide: FR
+- '4':
+    moves:
+    - leap: R
+    - leap: FR
+    - hop: F
+- '5':
+    moves:
+    - leap: F
+    - hop: FFF
+    - leap: BR
+    - hop: BBB
+      if: origin at B ally
+- '6':
+    moves:
+    - canAttack: true
+      hop: B
+    - canAttack: true
+      hop: BR
+    - hop: FF
+    - hop: RRR
+    - canAttack: true
+      hop: BBR
+      if: not origin facing B ally
+placement: 6646446466 6000550006 6000220006 1626336261
+player2mirrored: false
+winConditions:
+  and:
+  - EnemyPieceTypeRemoved: 5
+  - piecePlacedAt:
+      8: 6,3
+      9: 6,3

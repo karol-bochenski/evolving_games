@@ -1,0 +1,20 @@
+dimensions: 4x6
+pieces:
+- '1':
+    moves:
+    - slide: BR
+- '2':
+    moves:
+    - hop: FFR
+- '3':
+    moves:
+    - leap: R
+    - leap: F
+    - leap: B
+placement: 2330 0110
+player2mirrored: false
+winConditions:
+  or:
+  - piecePlacedAt:
+      5: 0,1,2,3
+  - EnemyPieceTypeRemoved: 2

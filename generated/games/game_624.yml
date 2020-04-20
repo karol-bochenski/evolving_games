@@ -1,0 +1,16 @@
+dimensions: 5x7
+pieces:
+- '1':
+    moves:
+    - leap: FR
+    - slide: F
+    - leap: B
+- '2':
+    moves:
+    - leap: F
+    - canAttack: true
+      hop: B
+placement: 01110 01110 21110
+player2mirrored: false
+winConditions:
+  EnemyTotalPiecesLeft: 1

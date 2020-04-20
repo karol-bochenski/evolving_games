@@ -1,0 +1,39 @@
+dimensions: 8x10
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: FF
+    - leap: R
+    - leap: BR
+- '2':
+    moves:
+    - hop: BB
+    - slide: F
+    - slide: R
+    - hop: BBR
+- '3':
+    moves:
+    - hop: B
+    - leap: R
+- '4':
+    moves:
+    - slide: R
+    - hop: FFR
+- '5':
+    moves:
+    - hop: B
+    - leap: R
+    - canAttack: true
+      hop: FFF
+      if: origin facing B empty
+- '6':
+    moves:
+    - leap: R
+placement: 01155110 02555520 01555510 03466430
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    6: 3,4
+    7: 3,4
+    8: 3,4

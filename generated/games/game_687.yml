@@ -1,0 +1,45 @@
+dimensions: 9x10
+pieces:
+- '1':
+    moves:
+    - slide: R
+    - slide: BR
+    - canAttack: true
+      hop: B
+    - slide: F
+- '2':
+    moves:
+    - slide: R
+    - slide: B
+    - leap: BR
+    - leap: F
+- '3':
+    moves:
+    - canAttack: true
+      hop: RRR
+- '4':
+    moves:
+    - canAttack: true
+      hop: R
+    - slide: B
+    - canAttack: true
+      hop: FFF
+    - slide: BR
+- '5':
+    moves:
+    - canAttack: true
+      hop: R
+    - canAttack: true
+      hop: F
+    - canAttack: true
+      hop: FRR
+    - hop: BBB
+    - leap: B
+placement: 222212222 022212220 014010410 315333513
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    6: 3,4,5
+    7: 3,4,5
+    8: 3,4,5
+    9: 3,4,5

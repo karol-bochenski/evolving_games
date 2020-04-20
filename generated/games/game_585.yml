@@ -1,0 +1,18 @@
+dimensions: 8x10
+pieces:
+- '1':
+    moves:
+    - slide: F
+    - slide: BR
+    - hop: BRR
+- '2':
+    moves:
+    - canAttack: true
+      hop: BB
+    - leap: R
+    - slide: BR
+placement: 01222212 02222222 00002000 00002000
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    8: 1,2

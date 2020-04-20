@@ -1,0 +1,31 @@
+dimensions: 10x10
+pieces:
+- '1':
+    moves:
+    - hop: BRR
+    - slide: F
+    - slide: FR
+- '2':
+    moves:
+    - leap: FR
+- '3':
+    moves:
+    - hop: BBR
+      if: origin facing FL ally
+    - slide: BR
+- '4':
+    moves:
+    - canAttack: true
+      hop: RR
+- '5':
+    moves:
+    - slide: B
+    - leap: F
+    - slide: R
+- '6':
+    moves:
+    - slide: R
+placement: 0011441100 0211441120 0324444260 0225445220
+player2mirrored: false
+winConditions:
+  EnemyPieceTypeRemoved: 6

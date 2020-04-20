@@ -1,0 +1,18 @@
+dimensions: 7x9
+pieces:
+- '1':
+    moves:
+    - leap: R
+- '2':
+    moves:
+    - hop: R
+    - slide: FR
+- '3':
+    moves:
+    - slide: R
+    - hop: FFR
+placement: 0100013 0111113 0333332 0000002
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    6: 1,2,3

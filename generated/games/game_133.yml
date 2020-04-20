@@ -1,0 +1,29 @@
+dimensions: 8x10
+pieces:
+- '1':
+    moves:
+    - hop: R
+- '2':
+    moves:
+    - hop: B
+    - if: not origin facing F empty
+      leap: R
+- '3':
+    moves:
+    - canAttack: true
+      hop: FRR
+    - hop: FFR
+    - slide: R
+- '4':
+    moves:
+    - leap: BR
+placement: 00001100 00000000 00000000 33233234
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      7: 1,2,3,4
+      8: 1,2,3,4
+      9: 1,2,3,4
+  - piecePlacedAt:
+      9: '1'

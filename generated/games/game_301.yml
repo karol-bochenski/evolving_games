@@ -1,0 +1,24 @@
+dimensions: 7x10
+pieces:
+- '1':
+    moves:
+    - leap: FR
+    - leap: BR
+- '2':
+    moves:
+    - canAttack: true
+      hop: FF
+      if: origin at F empty
+    - if: destination facing R enemy
+      slide: B
+    - if: destination at FR enemy
+      slide: R
+placement: 0200020 2202022 1202021 2002002
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      6: 2,3,4
+      7: 2,3,4
+      8: 2,3,4
+  - EnemyPieceTypeRemoved: 1

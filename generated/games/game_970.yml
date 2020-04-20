@@ -1,0 +1,20 @@
+dimensions: 4x9
+pieces:
+- '1':
+    moves:
+    - hop: FFR
+- '2':
+    moves:
+    - slide: BR
+    - slide: B
+    - leap: R
+    - canAttack: true
+      hop: FFF
+placement: 0011 0011 2002
+player2mirrored: false
+winConditions:
+  or:
+  - piecePlacedAt:
+      6: 0,1,2,3
+      7: 0,1,2,3
+  - EnemyPieceTypeRemoved: 1

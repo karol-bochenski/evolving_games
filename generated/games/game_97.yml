@@ -1,0 +1,10 @@
+dimensions: 9x5
+pieces:
+- '1':
+    moves:
+    - slide: FR
+placement: 111011011 111011111
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    4: 1,2,3,4

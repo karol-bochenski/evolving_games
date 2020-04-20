@@ -1,0 +1,29 @@
+dimensions: 4x6
+pieces:
+- '1':
+    moves:
+    - hop: RR
+    - canAttack: true
+      hop: F
+- '2':
+    moves:
+    - leap: BR
+    - slide: FR
+- '3':
+    moves:
+    - hop: BRR
+      if: origin facing BR enemy
+    - slide: R
+- '4':
+    moves:
+    - slide: B
+    - leap: F
+placement: 4224 3113
+player2mirrored: false
+winConditions:
+  or:
+  - piecePlacedAt:
+      4: 1,2
+  - piecePlacedAt:
+      4: 1,2
+      5: 1,2

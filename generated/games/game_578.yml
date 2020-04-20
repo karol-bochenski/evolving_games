@@ -1,0 +1,28 @@
+dimensions: 3x9
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: RRR
+    - leap: B
+    - canAttack: true
+      hop: F
+    - hop: FRR
+- '2':
+    moves:
+    - hop: R
+    - hop: B
+      if: not origin at L enemy
+- '3':
+    moves:
+    - leap: BR
+    - slide: FR
+placement: 303 101 202 101
+player2mirrored: false
+winConditions:
+  and:
+  - EnemyTotalPiecesLeft: 1
+  - piecePlacedAt:
+      6: 0,1,2
+      7: 0,1,2
+      8: 0,1,2

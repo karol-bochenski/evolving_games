@@ -1,0 +1,17 @@
+dimensions: 7x6
+pieces:
+- '1':
+    moves:
+    - slide: R
+    - if: origin at BR empty
+      leap: B
+    - slide: FR
+    - slide: BR
+- '2':
+    moves:
+    - hop: FR
+    - hop: R
+placement: '1222221'
+player2mirrored: true
+winConditions:
+  EnemyPieceTypeRemoved: 1

@@ -1,0 +1,27 @@
+dimensions: 6x10
+pieces:
+- '1':
+    moves:
+    - slide: R
+- '2':
+    moves:
+    - if: origin at BR empty
+      leap: R
+    - leap: BR
+    - slide: F
+- '3':
+    moves:
+    - hop: R
+- '4':
+    moves:
+    - slide: F
+    - slide: B
+placement: 001100 003300 004400 234432
+player2mirrored: false
+winConditions:
+  and:
+  - EnemyTotalPiecesLeft: 4
+  - piecePlacedAt:
+      6: 2,3
+      7: 2,3
+      8: 2,3

@@ -1,0 +1,10 @@
+dimensions: 7x7
+pieces:
+- '1':
+    moves:
+    - slide: FR
+    - leap: B
+placement: 0111110 1111111 1111111
+player2mirrored: true
+winConditions:
+  EnemyPieceTypeRemoved: 1

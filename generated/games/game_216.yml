@@ -1,0 +1,11 @@
+dimensions: 3x6
+pieces:
+- '1':
+    moves:
+    - slide: R
+    - slide: B
+    - slide: FR
+placement: 101 101
+player2mirrored: true
+winConditions:
+  EnemyPieceTypeRemoved: 1

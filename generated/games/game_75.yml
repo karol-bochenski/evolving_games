@@ -1,0 +1,35 @@
+dimensions: 10x6
+pieces:
+- '1':
+    moves:
+    - slide: R
+    - leap: FR
+    - slide: BR
+- '2':
+    moves:
+    - if: not origin facing L empty
+      leap: R
+    - slide: BR
+    - hop: F
+- '3':
+    moves:
+    - leap: F
+    - slide: R
+- '4':
+    moves:
+    - hop: FRR
+    - canAttack: true
+      hop: BRR
+    - leap: B
+    - hop: RR
+    - canAttack: true
+      hop: F
+- '5':
+    moves:
+    - hop: FF
+    - leap: FR
+placement: 0124004210 0352002530
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    5: 2,3,4,7,6,5

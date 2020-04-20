@@ -1,0 +1,13 @@
+dimensions: 3x6
+pieces:
+- '1':
+    moves:
+    - hop: B
+      if: destination at FR empty
+    - leap: F
+    - if: origin facing F ally
+      slide: R
+placement: '101'
+player2mirrored: false
+winConditions:
+  EnemyTotalPiecesLeft: 1

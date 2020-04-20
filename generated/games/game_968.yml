@@ -1,0 +1,16 @@
+dimensions: 8x6
+pieces:
+- '1':
+    moves:
+    - slide: R
+    - hop: FFF
+    - slide: FR
+    - hop: BBR
+- '2':
+    moves:
+    - hop: FFR
+    - slide: F
+placement: '01211210'
+player2mirrored: false
+winConditions:
+  EnemyPieceTypeRemoved: 1

@@ -1,0 +1,14 @@
+dimensions: 5x10
+pieces:
+- '1':
+    moves:
+    - slide: F
+    - canAttack: true
+      hop: R
+placement: 11111 11011 11111 10101
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    7: 0,4
+    8: 0,4
+    9: 0,4

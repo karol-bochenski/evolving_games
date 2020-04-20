@@ -1,0 +1,22 @@
+dimensions: 5x5
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: RR
+    - leap: B
+    - canAttack: true
+      hop: FF
+- '2':
+    moves:
+    - hop: RR
+    - canAttack: true
+      hop: B
+    - leap: F
+placement: 02220 22122
+player2mirrored: false
+winConditions:
+  or:
+  - EnemyPieceTypeRemoved: 1
+  - piecePlacedAt:
+      4: '2'

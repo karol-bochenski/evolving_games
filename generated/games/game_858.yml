@@ -1,0 +1,37 @@
+dimensions: 9x10
+pieces:
+- '1':
+    moves:
+    - hop: RR
+    - slide: F
+- '2':
+    moves:
+    - canAttack: true
+      hop: FF
+- '3':
+    moves:
+    - canAttack: true
+      hop: FF
+    - if: origin facing FL enemy
+      slide: FR
+    - hop: BRR
+- '4':
+    moves:
+    - canAttack: true
+      hop: B
+    - leap: R
+    - canAttack: true
+      hop: RRR
+    - slide: BR
+- '5':
+    moves:
+    - slide: BR
+    - leap: B
+placement: 111111111 022244444 025244344 022200000
+player2mirrored: false
+winConditions:
+  and:
+  - piecePlacedAt:
+      7: 5,6
+      8: 5,6
+  - EnemyPieceTypeRemoved: 5

@@ -1,0 +1,26 @@
+dimensions: 8x10
+pieces:
+- '1':
+    moves:
+    - if: origin at F empty
+      slide: F
+    - hop: B
+    - leap: FR
+- '2':
+    moves:
+    - leap: FR
+    - canAttack: true
+      hop: BB
+    - hop: RRR
+    - canAttack: true
+      hop: BR
+placement: 00000000 00000000 12222221
+player2mirrored: true
+winConditions:
+  or:
+  - EnemyTotalPiecesLeft: 1
+  - piecePlacedAt:
+      6: 1,2,3,4,6,5
+      7: 1,2,3,4,6,5
+      8: 1,2,3,4,6,5
+      9: 1,2,3,4,6,5

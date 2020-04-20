@@ -1,0 +1,18 @@
+dimensions: 5x10
+pieces:
+- '1':
+    moves:
+    - leap: F
+    - slide: R
+    - if: not destination facing B enemy
+      leap: BR
+- '2':
+    moves:
+    - slide: R
+    - slide: BR
+placement: 00000 22120
+player2mirrored: false
+winConditions:
+  or:
+  - EnemyTotalPiecesLeft: 1
+  - EnemyPieceTypeRemoved: 2

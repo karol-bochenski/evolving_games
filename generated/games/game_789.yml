@@ -1,0 +1,25 @@
+dimensions: 10x10
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: FR
+    - canAttack: true
+      hop: BRR
+- '2':
+    moves:
+    - canAttack: true
+      hop: FRR
+      if: not destination facing F enemy
+    - canAttack: true
+      hop: R
+      if: destination facing F empty
+    - canAttack: true
+      hop: B
+    - leap: FR
+    - slide: BR
+placement: 1000000000 1000000000 1000022221 0022222220
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    9: 3,4,5,6,7

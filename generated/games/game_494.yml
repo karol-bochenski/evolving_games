@@ -1,0 +1,15 @@
+dimensions: 8x6
+pieces:
+- '1':
+    moves:
+    - leap: B
+    - hop: FR
+      if: not origin at FL empty
+    - slide: R
+placement: 11111111 11111111
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      5: 0,1,2,3,4,5,6,7
+  - EnemyTotalPiecesLeft: 7

@@ -1,0 +1,25 @@
+dimensions: 8x10
+pieces:
+- '1':
+    moves:
+    - leap: F
+    - slide: FR
+    - slide: R
+- '2':
+    moves:
+    - slide: B
+- '3':
+    moves:
+    - slide: R
+    - slide: B
+placement: 00311320 00030002 00030002 00000002
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      6: 6,7
+      7: 6,7
+      8: 6,7
+      9: 6,7
+  - piecePlacedAt:
+      9: 3,4,5,6

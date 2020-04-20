@@ -1,0 +1,24 @@
+dimensions: 5x6
+pieces:
+- '1':
+    moves:
+    - slide: F
+    - canAttack: true
+      hop: B
+    - leap: R
+    - canAttack: true
+      hop: FFR
+- '2':
+    moves:
+    - if: origin at F empty
+      leap: FR
+    - canAttack: true
+      hop: BR
+    - leap: F
+placement: 00000 01210
+player2mirrored: false
+winConditions:
+  and:
+  - piecePlacedAt:
+      4: 0,1,2
+  - EnemyPieceTypeRemoved: 2

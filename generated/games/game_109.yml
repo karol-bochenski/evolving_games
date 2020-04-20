@@ -1,0 +1,19 @@
+dimensions: 4x7
+pieces:
+- '1':
+    moves:
+    - slide: R
+    - hop: F
+      if: origin at R empty
+- '2':
+    moves:
+    - hop: RR
+    - hop: FRR
+    - hop: BRR
+placement: 0000 0220 1001
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    4: 2,1
+    5: 2,1
+    6: 2,1

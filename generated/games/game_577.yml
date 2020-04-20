@@ -1,0 +1,10 @@
+dimensions: 4x7
+pieces:
+- '1':
+    moves:
+    - slide: BR
+    - slide: F
+placement: '1111'
+player2mirrored: false
+winConditions:
+  EnemyTotalPiecesLeft: 1

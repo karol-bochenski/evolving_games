@@ -1,0 +1,24 @@
+dimensions: 6x10
+pieces:
+- '1':
+    moves:
+    - hop: BBB
+    - canAttack: true
+      hop: RR
+    - canAttack: true
+      hop: R
+- '2':
+    moves:
+    - canAttack: true
+      hop: RR
+    - canAttack: true
+      hop: FR
+placement: 122221 022220 222222 222222
+player2mirrored: false
+winConditions:
+  and:
+  - piecePlacedAt:
+      7: 2,3
+      8: 2,3
+      9: 2,3
+  - EnemyPieceTypeRemoved: 2

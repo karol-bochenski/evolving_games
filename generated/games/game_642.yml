@@ -1,0 +1,20 @@
+dimensions: 7x8
+pieces:
+- '1':
+    moves:
+    - slide: R
+    - leap: F
+- '2':
+    moves:
+    - slide: R
+    - slide: BR
+    - slide: B
+placement: 1222221 2222222 2011102
+player2mirrored: true
+winConditions:
+  or:
+  - piecePlacedAt:
+      5: 3,4,5,2,1
+      6: 3,4,5,2,1
+      7: 3,4,5,2,1
+  - EnemyPieceTypeRemoved: 1

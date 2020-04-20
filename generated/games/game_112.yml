@@ -1,0 +1,11 @@
+dimensions: 9x7
+pieces:
+- '1':
+    moves:
+    - hop: FF
+placement: 111111100 100000000 100000000
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    5: 1,2,3,4,5,6
+    6: 1,2,3,4,5,6

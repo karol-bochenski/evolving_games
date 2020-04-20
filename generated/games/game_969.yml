@@ -1,0 +1,41 @@
+dimensions: 6x8
+pieces:
+- '1':
+    moves:
+    - hop: RRR
+- '2':
+    moves:
+    - canAttack: true
+      hop: F
+- '3':
+    moves:
+    - canAttack: true
+      hop: BR
+    - slide: R
+    - slide: B
+- '4':
+    moves:
+    - canAttack: true
+      hop: BBR
+    - hop: RRR
+    - leap: F
+- '5':
+    moves:
+    - slide: R
+    - hop: BBB
+- '6':
+    moves:
+    - canAttack: true
+      hop: R
+    - leap: BR
+placement: 621126 523324 020020
+player2mirrored: false
+winConditions:
+  and:
+  - piecePlacedAt:
+      5: 1,4
+      6: 1,4
+  - piecePlacedAt:
+      5: 0,1,5,4
+      6: 0,1,5,4
+      7: 0,1,5,4

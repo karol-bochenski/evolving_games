@@ -1,0 +1,38 @@
+dimensions: 4x8
+pieces:
+- '1':
+    moves:
+    - hop: BR
+- '2':
+    moves:
+    - canAttack: true
+      hop: BB
+    - canAttack: true
+      hop: RRR
+- '3':
+    moves:
+    - leap: B
+    - canAttack: true
+      hop: RR
+- '4':
+    moves:
+    - hop: R
+    - leap: B
+    - leap: BR
+- '5':
+    moves:
+    - slide: BR
+- '6':
+    moves:
+    - slide: R
+    - slide: B
+    - slide: FR
+    - hop: F
+placement: 0444 3665 1002
+player2mirrored: false
+winConditions:
+  or:
+  - piecePlacedAt:
+      5: 2,3
+  - piecePlacedAt:
+      6: 0,1,2,3

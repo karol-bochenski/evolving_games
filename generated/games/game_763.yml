@@ -1,0 +1,16 @@
+dimensions: 7x8
+pieces:
+- '1':
+    moves:
+    - hop: B
+    - if: origin at B ally
+      slide: R
+    - leap: FR
+- '2':
+    moves:
+    - canAttack: true
+      hop: R
+placement: 1000021 0000022
+player2mirrored: false
+winConditions:
+  EnemyTotalPiecesLeft: 1

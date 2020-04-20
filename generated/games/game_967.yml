@@ -1,0 +1,32 @@
+dimensions: 8x10
+pieces:
+- '1':
+    moves:
+    - if: origin facing FR enemy
+      leap: BR
+    - leap: B
+    - leap: F
+    - hop: R
+      if: destination at BL enemy
+- '2':
+    moves:
+    - leap: B
+    - canAttack: true
+      hop: RRR
+    - hop: FR
+    - leap: F
+- '3':
+    moves:
+    - canAttack: true
+      hop: RR
+    - leap: BR
+    - hop: FR
+- '4':
+    moves:
+    - leap: BR
+    - canAttack: true
+      hop: R
+placement: 00144122 00244222 33333322 00443322
+player2mirrored: true
+winConditions:
+  EnemyPieceTypeRemoved: 1

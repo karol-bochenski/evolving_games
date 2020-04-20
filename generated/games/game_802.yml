@@ -1,0 +1,30 @@
+dimensions: 3x8
+pieces:
+- '1':
+    moves:
+    - leap: BR
+    - hop: FRR
+    - hop: BBR
+- '2':
+    moves:
+    - hop: R
+    - hop: B
+- '3':
+    moves:
+    - canAttack: true
+      hop: R
+- '4':
+    moves:
+    - hop: FR
+    - hop: BRR
+- '5':
+    moves:
+    - canAttack: true
+      hop: FF
+    - canAttack: true
+      hop: B
+placement: 525 131 404
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    7: '1'

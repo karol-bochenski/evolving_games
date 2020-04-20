@@ -1,0 +1,14 @@
+dimensions: 8x9
+pieces:
+- '1':
+    moves:
+    - leap: R
+    - hop: B
+    - leap: F
+placement: 10000001 10000001 10000001 10111101
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    5: 4,3
+    6: 4,3
+    7: 4,3

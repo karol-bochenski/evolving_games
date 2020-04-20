@@ -1,0 +1,31 @@
+dimensions: 7x6
+pieces:
+- '1':
+    moves:
+    - hop: BBB
+    - slide: R
+- '2':
+    moves:
+    - hop: FFR
+    - slide: F
+- '3':
+    moves:
+    - canAttack: true
+      hop: BBR
+      if: not destination at R enemy
+    - hop: BB
+    - canAttack: true
+      hop: FFR
+    - leap: R
+    - canAttack: true
+      hop: RRR
+placement: 3111113 3222220
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      4: 2,3
+      5: 2,3
+  - piecePlacedAt:
+      4: 1,2,3,4,5,6
+      5: 1,2,3,4,5,6

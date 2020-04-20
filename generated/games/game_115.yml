@@ -1,0 +1,18 @@
+dimensions: 3x10
+pieces:
+- '1':
+    moves:
+    - if: origin at B empty
+      leap: BR
+    - hop: FR
+      if: not origin at BR ally
+    - canAttack: true
+      hop: F
+    - hop: BBR
+placement: 110 111 111 111
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    6: 1,2
+    7: 1,2
+    8: 1,2

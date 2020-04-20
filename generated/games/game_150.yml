@@ -1,0 +1,24 @@
+dimensions: 9x8
+pieces:
+- '1':
+    moves:
+    - slide: FR
+    - leap: F
+    - slide: BR
+- '2':
+    moves:
+    - slide: F
+    - leap: B
+- '3':
+    moves:
+    - if: destination at  empty
+      slide: R
+placement: 000002220 113332223 111333133
+player2mirrored: true
+winConditions:
+  and:
+  - EnemyPieceTypeRemoved: 3
+  - piecePlacedAt:
+      5: '5'
+      6: '5'
+      7: '5'

@@ -1,0 +1,17 @@
+dimensions: 8x10
+pieces:
+- '1':
+    moves:
+    - hop: RRR
+    - if: origin at FR empty
+      leap: B
+    - hop: F
+placement: '00110000'
+player2mirrored: true
+winConditions:
+  or:
+  - piecePlacedAt:
+      6: 1,2,3,4,5
+  - piecePlacedAt:
+      7: 4,5,6,7
+      8: 4,5,6,7

@@ -1,0 +1,27 @@
+dimensions: 5x8
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: FR
+    - if: origin facing B ally
+      slide: R
+    - canAttack: true
+      hop: FRR
+- '2':
+    moves:
+    - hop: BR
+    - if: origin facing R ally
+      leap: FR
+- '3':
+    moves:
+    - canAttack: true
+      hop: B
+    - canAttack: true
+      hop: R
+    - slide: FR
+placement: 00000 30003 02201
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    5: 0,1,2,3,4

@@ -1,0 +1,32 @@
+dimensions: 9x5
+pieces:
+- '1':
+    moves:
+    - slide: R
+- '2':
+    moves:
+    - hop: F
+    - slide: R
+- '3':
+    moves:
+    - slide: R
+- '4':
+    moves:
+    - canAttack: true
+      hop: BR
+      if: destination facing BL enemy
+    - canAttack: true
+      hop: B
+      if: destination at BR empty
+- '5':
+    moves:
+    - leap: FR
+    - canAttack: true
+      hop: FF
+    - leap: R
+placement: 533333335 411232114
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    3: 0,1,2,3
+    4: 0,1,2,3

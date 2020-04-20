@@ -1,0 +1,27 @@
+dimensions: 9x9
+pieces:
+- '1':
+    moves:
+    - slide: FR
+    - slide: R
+- '2':
+    moves:
+    - slide: FR
+- '3':
+    moves:
+    - slide: BR
+    - hop: BRR
+- '4':
+    moves:
+    - hop: FFF
+    - leap: R
+    - if: origin at FL enemy
+      leap: F
+- '5':
+    moves:
+    - slide: FR
+    - hop: RRR
+placement: 200010002 100050001 104333401
+player2mirrored: true
+winConditions:
+  EnemyPieceTypeRemoved: 5

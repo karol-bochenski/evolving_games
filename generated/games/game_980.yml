@@ -1,0 +1,18 @@
+dimensions: 10x8
+pieces:
+- '1':
+    moves:
+    - leap: R
+- '2':
+    moves:
+    - hop: BBR
+    - slide: R
+    - leap: FR
+- '3':
+    moves:
+    - hop: F
+    - slide: FR
+placement: 0131331313 2133330012 0011331100
+player2mirrored: false
+winConditions:
+  EnemyTotalPiecesLeft: 1

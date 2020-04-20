@@ -1,0 +1,32 @@
+dimensions: 3x7
+pieces:
+- '1':
+    moves:
+    - if: origin facing F empty
+      slide: B
+    - hop: FFF
+    - hop: R
+      if: destination at F empty
+    - hop: RR
+- '2':
+    moves:
+    - canAttack: true
+      hop: BB
+    - slide: F
+    - if: origin at FR empty
+      leap: R
+- '3':
+    moves:
+    - leap: R
+    - hop: FFF
+    - hop: FR
+- '4':
+    moves:
+    - slide: R
+    - canAttack: true
+      hop: F
+placement: 221 424 033
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    5: '0'

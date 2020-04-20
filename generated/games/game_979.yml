@@ -1,0 +1,29 @@
+dimensions: 10x10
+pieces:
+- '1':
+    moves:
+    - leap: B
+    - leap: FR
+    - slide: R
+- '2':
+    moves:
+    - canAttack: true
+      hop: FR
+    - slide: BR
+    - canAttack: true
+      hop: R
+- '3':
+    moves:
+    - hop: BR
+    - canAttack: true
+      hop: FRR
+    - leap: FR
+    - leap: F
+placement: 0011111100 2300002232 3000002223 2121221213
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    6: 0,1,2,3,4,5
+    7: 0,1,2,3,4,5
+    8: 0,1,2,3,4,5
+    9: 0,1,2,3,4,5

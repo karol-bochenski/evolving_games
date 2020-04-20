@@ -1,0 +1,18 @@
+dimensions: 9x9
+pieces:
+- '1':
+    moves:
+    - hop: FRR
+    - leap: R
+- '2':
+    moves:
+    - canAttack: true
+      hop: R
+    - slide: F
+placement: 210010012 110010011 110010011 000010000
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    6: 2,3,4,5,6
+    7: 2,3,4,5,6
+    8: 2,3,4,5,6

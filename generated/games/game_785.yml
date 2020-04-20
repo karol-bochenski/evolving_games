@@ -1,0 +1,20 @@
+dimensions: 6x7
+pieces:
+- '1':
+    moves:
+    - if: origin facing B ally
+      slide: R
+    - hop: F
+- '2':
+    moves:
+    - canAttack: true
+      hop: R
+      if: origin at F empty
+    - slide: BR
+    - hop: B
+placement: 000002 000002 100001
+player2mirrored: true
+winConditions:
+  or:
+  - EnemyTotalPiecesLeft: 2
+  - EnemyPieceTypeRemoved: 1

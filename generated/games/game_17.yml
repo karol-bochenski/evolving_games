@@ -1,0 +1,21 @@
+dimensions: 5x6
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: B
+    - canAttack: true
+      hop: BBR
+    - hop: FFF
+- '2':
+    moves:
+    - leap: B
+    - canAttack: true
+      hop: F
+    - canAttack: true
+      hop: BBR
+    - slide: R
+placement: '02120'
+player2mirrored: true
+winConditions:
+  EnemyPieceTypeRemoved: 2

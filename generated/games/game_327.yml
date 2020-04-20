@@ -1,0 +1,33 @@
+dimensions: 7x10
+pieces:
+- '1':
+    moves:
+    - leap: F
+    - hop: B
+- '2':
+    moves:
+    - leap: R
+    - canAttack: true
+      hop: RRR
+- '3':
+    moves:
+    - hop: BB
+- '4':
+    moves:
+    - leap: FR
+- '5':
+    moves:
+    - hop: F
+- '6':
+    moves:
+    - canAttack: true
+      hop: FR
+placement: 0043400 5440445 0000000 0613120
+player2mirrored: false
+winConditions:
+  and:
+  - piecePlacedAt:
+      7: 0,6
+      8: 0,6
+      9: 0,6
+  - EnemyPieceTypeRemoved: 5

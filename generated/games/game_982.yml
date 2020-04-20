@@ -1,0 +1,21 @@
+dimensions: 10x7
+pieces:
+- '1':
+    moves:
+    - slide: R
+- '2':
+    moves:
+    - hop: BRR
+      if: not destination at FL enemy
+    - canAttack: true
+      hop: FFR
+    - hop: BR
+- '3':
+    moves:
+    - canAttack: true
+      hop: F
+    - slide: R
+placement: 0300000110 2222200113 0333330113
+player2mirrored: false
+winConditions:
+  EnemyPieceTypeRemoved: 2

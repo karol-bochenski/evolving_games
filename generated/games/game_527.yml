@@ -1,0 +1,26 @@
+dimensions: 3x7
+pieces:
+- '1':
+    moves:
+    - if: not origin at BL empty
+      leap: R
+- '2':
+    moves:
+    - leap: R
+- '3':
+    moves:
+    - slide: F
+    - hop: RR
+    - canAttack: true
+      hop: BR
+    - leap: FR
+placement: 232 131 323
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      4: '1'
+      5: '1'
+      6: '1'
+  - piecePlacedAt:
+      6: '1'

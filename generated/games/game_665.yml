@@ -1,0 +1,26 @@
+dimensions: 9x10
+pieces:
+- '1':
+    moves:
+    - slide: B
+- '2':
+    moves:
+    - hop: BRR
+      if: origin facing F ally
+- '3':
+    moves:
+    - canAttack: true
+      hop: R
+    - hop: FR
+    - hop: FFR
+    - hop: BR
+- '4':
+    moves:
+    - hop: R
+    - slide: F
+    - hop: BB
+    - hop: FR
+placement: 000040000 000010000 000030000 000020000
+player2mirrored: true
+winConditions:
+  EnemyTotalPiecesLeft: 2

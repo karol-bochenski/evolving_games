@@ -1,0 +1,27 @@
+dimensions: 8x9
+pieces:
+- '1':
+    moves:
+    - hop: FR
+- '2':
+    moves:
+    - hop: RRR
+    - leap: B
+    - hop: R
+    - slide: FR
+    - slide: F
+- '3':
+    moves:
+    - canAttack: true
+      hop: FF
+    - leap: R
+    - hop: B
+    - slide: BR
+- '4':
+    moves:
+    - slide: R
+    - hop: BB
+placement: 21344312 44133144 44044044 21000012
+player2mirrored: true
+winConditions:
+  EnemyTotalPiecesLeft: 2

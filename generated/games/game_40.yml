@@ -1,0 +1,24 @@
+dimensions: 6x8
+pieces:
+- '1':
+    moves:
+    - hop: B
+    - hop: BR
+      if: not destination facing R enemy
+    - hop: F
+    - leap: R
+- '2':
+    moves:
+    - hop: B
+- '3':
+    moves:
+    - hop: BR
+    - leap: B
+    - leap: FR
+placement: 330033 322223 122221
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    5: 2,3
+    6: 2,3
+    7: 2,3

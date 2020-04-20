@@ -1,0 +1,25 @@
+dimensions: 5x8
+pieces:
+- '1':
+    moves:
+    - if: origin facing F enemy
+      leap: F
+    - slide: BR
+    - slide: B
+- '2':
+    moves:
+    - slide: R
+- '3':
+    moves:
+    - leap: F
+    - hop: RR
+      if: origin facing L ally
+    - leap: BR
+placement: 00300 00100 12321
+player2mirrored: false
+winConditions:
+  and:
+  - piecePlacedAt:
+      5: 1,2,3
+      6: 1,2,3
+  - EnemyPieceTypeRemoved: 3

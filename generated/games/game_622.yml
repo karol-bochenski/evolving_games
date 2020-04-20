@@ -1,0 +1,12 @@
+dimensions: 9x10
+pieces:
+- '1':
+    moves:
+    - hop: FR
+placement: 111111111 111111111 000010000 000010000
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    6: 0,1,2,8,7,6
+    7: 0,1,2,8,7,6
+    8: 0,1,2,8,7,6

@@ -1,0 +1,31 @@
+dimensions: 8x5
+pieces:
+- '1':
+    moves:
+    - slide: R
+    - leap: BR
+    - canAttack: true
+      hop: FR
+- '2':
+    moves:
+    - canAttack: true
+      hop: FFF
+    - canAttack: true
+      hop: B
+      if: destination at F enemy
+    - slide: R
+- '3':
+    moves:
+    - slide: F
+- '4':
+    moves:
+    - leap: F
+    - hop: FRR
+- '5':
+    moves:
+    - leap: R
+    - slide: B
+placement: 11533522 41222224
+player2mirrored: true
+winConditions:
+  EnemyTotalPiecesLeft: 5

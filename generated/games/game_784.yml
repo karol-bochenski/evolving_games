@@ -1,0 +1,19 @@
+dimensions: 10x10
+pieces:
+- '1':
+    moves:
+    - if: origin at B enemy
+      slide: F
+- '2':
+    moves:
+    - hop: RRR
+    - slide: B
+    - canAttack: true
+      hop: FRR
+placement: 0000000000 0000000000 2221221222 2222222222
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    6: 4,5
+    7: 4,5
+    8: 4,5

@@ -1,0 +1,16 @@
+dimensions: 6x5
+pieces:
+- '1':
+    moves:
+    - leap: FR
+    - leap: R
+    - hop: FF
+    - slide: BR
+- '2':
+    moves:
+    - hop: FR
+placement: 100001 220022
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    4: 2,3,4,1

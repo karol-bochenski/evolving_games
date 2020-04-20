@@ -1,0 +1,39 @@
+dimensions: 7x5
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: RR
+    - canAttack: true
+      hop: R
+    - hop: BBB
+- '2':
+    moves:
+    - leap: BR
+    - hop: R
+    - slide: B
+- '3':
+    moves:
+    - canAttack: true
+      hop: R
+    - canAttack: true
+      hop: FRR
+    - leap: BR
+    - canAttack: true
+      hop: FF
+- '4':
+    moves:
+    - hop: RR
+    - slide: B
+- '5':
+    moves:
+    - canAttack: true
+      hop: BBR
+    - slide: R
+- '6':
+    moves:
+    - hop: B
+placement: 5466645 3610162
+player2mirrored: true
+winConditions:
+  EnemyTotalPiecesLeft: 6

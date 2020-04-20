@@ -1,0 +1,23 @@
+dimensions: 4x9
+pieces:
+- '1':
+    moves:
+    - hop: B
+    - hop: BR
+      if: origin at BR ally
+    - hop: FF
+    - canAttack: true
+      hop: R
+- '2':
+    moves:
+    - canAttack: true
+      hop: FRR
+- '3':
+    moves:
+    - slide: R
+placement: 0001 0001 3223 0110
+player2mirrored: true
+winConditions:
+  and:
+  - EnemyPieceTypeRemoved: 1
+  - EnemyTotalPiecesLeft: 1

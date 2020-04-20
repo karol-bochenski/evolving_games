@@ -1,0 +1,18 @@
+dimensions: 4x6
+pieces:
+- '1':
+    moves:
+    - hop: BRR
+    - leap: R
+- '2':
+    moves:
+    - leap: BR
+    - leap: F
+    - leap: B
+    - slide: R
+    - hop: FFR
+placement: 0000 1221
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    5: 0,1

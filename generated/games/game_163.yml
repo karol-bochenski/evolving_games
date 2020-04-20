@@ -1,0 +1,40 @@
+dimensions: 6x6
+pieces:
+- '1':
+    moves:
+    - slide: FR
+    - leap: F
+- '2':
+    moves:
+    - leap: B
+    - slide: FR
+    - hop: BR
+    - leap: R
+- '3':
+    moves:
+    - canAttack: true
+      hop: R
+    - hop: FF
+    - canAttack: true
+      hop: RR
+- '4':
+    moves:
+    - hop: BBB
+    - slide: F
+    - leap: FR
+    - hop: BB
+- '5':
+    moves:
+    - hop: BBR
+      if: origin facing FL ally
+    - canAttack: true
+      hop: RRR
+    - slide: BR
+placement: 532215 400000
+player2mirrored: false
+winConditions:
+  and:
+  - piecePlacedAt:
+      5: 4,5
+  - piecePlacedAt:
+      4: 0,1,2,3,4,5

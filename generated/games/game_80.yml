@@ -1,0 +1,15 @@
+dimensions: 3x5
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: BBR
+    - hop: FFF
+placement: 000 111
+player2mirrored: false
+winConditions:
+  and:
+  - piecePlacedAt:
+      3: '1'
+      4: '1'
+  - EnemyPieceTypeRemoved: 1

@@ -1,0 +1,18 @@
+dimensions: 5x10
+pieces:
+- '1':
+    moves:
+    - leap: F
+    - slide: R
+    - if: destination at R empty
+      slide: BR
+placement: 00010 00010 00010 00010
+player2mirrored: false
+winConditions:
+  or:
+  - piecePlacedAt:
+      6: '2'
+      7: '2'
+      8: '2'
+      9: '2'
+  - EnemyTotalPiecesLeft: 1

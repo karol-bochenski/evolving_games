@@ -1,0 +1,22 @@
+dimensions: 10x9
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: RRR
+    - canAttack: true
+      hop: BRR
+      if: not destination facing B empty
+    - if: origin at F empty
+      leap: FR
+    - canAttack: true
+      hop: R
+- '2':
+    moves:
+    - hop: FFF
+    - leap: R
+placement: 2222112222 2222222222 2220220222 2222222222
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    5: 4,5,6,3

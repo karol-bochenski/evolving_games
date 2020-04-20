@@ -1,0 +1,27 @@
+dimensions: 4x8
+pieces:
+- '1':
+    moves:
+    - hop: F
+    - canAttack: true
+      hop: R
+- '2':
+    moves:
+    - if: origin facing FL ally
+      leap: R
+- '3':
+    moves:
+    - leap: R
+    - hop: FFF
+      if: origin at FL ally
+- '4':
+    moves:
+    - leap: B
+    - leap: F
+    - leap: R
+placement: 4444 2112 3443
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    6: 2,3,1,0
+    7: 2,3,1,0

@@ -1,0 +1,12 @@
+dimensions: 8x7
+pieces:
+- '1':
+    moves:
+    - slide: F
+placement: 00000000 11111111 11011011
+player2mirrored: true
+winConditions:
+  or:
+  - piecePlacedAt:
+      5: 4,3
+  - EnemyPieceTypeRemoved: 1

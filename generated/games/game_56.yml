@@ -1,0 +1,15 @@
+dimensions: 5x5
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: R
+    - canAttack: true
+      hop: FR
+      if: not origin facing FL enemy
+placement: 00010 00010
+player2mirrored: true
+winConditions:
+  and:
+  - EnemyTotalPiecesLeft: 1
+  - EnemyPieceTypeRemoved: 1

@@ -1,0 +1,37 @@
+dimensions: 7x9
+pieces:
+- '1':
+    moves:
+    - leap: F
+    - slide: R
+- '2':
+    moves:
+    - leap: B
+    - slide: R
+    - canAttack: true
+      hop: BBB
+- '3':
+    moves:
+    - hop: F
+      if: destination at BR enemy
+- '4':
+    moves:
+    - canAttack: true
+      hop: FFR
+    - slide: BR
+- '5':
+    moves:
+    - leap: FR
+    - hop: FF
+    - leap: R
+    - if: origin at L empty
+      leap: BR
+- '6':
+    moves:
+    - canAttack: true
+      hop: RRR
+    - leap: R
+placement: 5415145 3253523 5556555 5465645
+player2mirrored: false
+winConditions:
+  EnemyPieceTypeRemoved: 3

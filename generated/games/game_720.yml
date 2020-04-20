@@ -1,0 +1,25 @@
+dimensions: 8x5
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: FRR
+    - hop: RR
+      if: origin facing L ally
+- '2':
+    moves:
+    - hop: FR
+    - slide: F
+    - canAttack: true
+      hop: RR
+- '3':
+    moves:
+    - slide: R
+placement: 00000000 12300321
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      3: 3,4,5,6,2,1
+      4: 3,4,5,6,2,1
+  - EnemyTotalPiecesLeft: 2

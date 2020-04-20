@@ -1,0 +1,22 @@
+dimensions: 7x7
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: RR
+      if: origin facing BR empty
+    - canAttack: true
+      hop: F
+- '2':
+    moves:
+    - canAttack: true
+      hop: FR
+    - canAttack: true
+      hop: R
+placement: 0221110 0221110 0221110
+player2mirrored: false
+winConditions:
+  or:
+  - EnemyPieceTypeRemoved: 2
+  - piecePlacedAt:
+      4: 0,1,2,3,4,5,6

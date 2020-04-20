@@ -1,0 +1,16 @@
+dimensions: 7x5
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: FFR
+    - hop: BRR
+      if: origin facing L ally
+    - canAttack: true
+      hop: FF
+    - hop: R
+placement: 1111110 1100011
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    3: 0,1,2

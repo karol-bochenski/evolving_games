@@ -1,0 +1,21 @@
+dimensions: 10x10
+pieces:
+- '1':
+    moves:
+    - hop: RRR
+    - hop: R
+- '2':
+    moves:
+    - leap: R
+    - if: not destination at BL empty
+      leap: FR
+- '3':
+    moves:
+    - canAttack: true
+      hop: F
+    - leap: B
+    - hop: BBB
+placement: 0223003000 0221001000 0000000000 0000000001
+player2mirrored: true
+winConditions:
+  EnemyPieceTypeRemoved: 3

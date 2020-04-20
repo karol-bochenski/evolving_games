@@ -1,0 +1,17 @@
+dimensions: 8x6
+pieces:
+- '1':
+    moves:
+    - slide: F
+    - hop: FRR
+    - leap: FR
+- '2':
+    moves:
+    - hop: FR
+placement: 00022000 00011000
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      5: 5,2
+  - EnemyTotalPiecesLeft: 2

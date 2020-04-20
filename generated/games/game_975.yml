@@ -1,0 +1,22 @@
+dimensions: 4x5
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: F
+    - leap: R
+- '2':
+    moves:
+    - canAttack: true
+      hop: BR
+- '3':
+    moves:
+    - leap: R
+    - canAttack: true
+      hop: FR
+    - leap: B
+placement: 3333 2112
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    4: 1,2

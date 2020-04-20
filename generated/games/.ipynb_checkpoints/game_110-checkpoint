@@ -1,0 +1,31 @@
+dimensions: 5x9
+pieces:
+- '1':
+    moves:
+    - hop: FR
+- '2':
+    moves:
+    - leap: R
+    - slide: B
+- '3':
+    moves:
+    - leap: FR
+    - canAttack: true
+      hop: B
+    - slide: F
+- '4':
+    moves:
+    - leap: R
+    - canAttack: true
+      hop: FFF
+- '5':
+    moves:
+    - leap: R
+    - canAttack: true
+      hop: FF
+placement: 00000 00000 15251 23242
+player2mirrored: true
+winConditions:
+  and:
+  - EnemyPieceTypeRemoved: 1
+  - EnemyTotalPiecesLeft: 3

@@ -1,0 +1,11 @@
+dimensions: 6x8
+pieces:
+- '1':
+    moves:
+    - hop: FFR
+      if: destination at FR enemy
+    - leap: FR
+placement: 001100 001100
+player2mirrored: true
+winConditions:
+  EnemyTotalPiecesLeft: 1

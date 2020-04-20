@@ -1,0 +1,40 @@
+dimensions: 5x5
+pieces:
+- '1':
+    moves:
+    - leap: R
+    - canAttack: true
+      hop: BRR
+    - slide: BR
+    - canAttack: true
+      hop: RRR
+- '2':
+    moves:
+    - canAttack: true
+      hop: BR
+      if: origin at BR ally
+    - canAttack: true
+      hop: RRR
+    - slide: B
+    - hop: FFR
+- '3':
+    moves:
+    - leap: FR
+    - canAttack: true
+      hop: BB
+- '4':
+    moves:
+    - leap: R
+    - hop: BRR
+    - canAttack: true
+      hop: RRR
+- '5':
+    moves:
+    - slide: F
+placement: 42325 15551
+player2mirrored: false
+winConditions:
+  and:
+  - piecePlacedAt:
+      3: 0,1,2
+  - EnemyPieceTypeRemoved: 5

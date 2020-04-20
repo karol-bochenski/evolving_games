@@ -1,0 +1,23 @@
+dimensions: 4x8
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: B
+    - canAttack: true
+      hop: R
+    - hop: FR
+      if: destination at B empty
+- '2':
+    moves:
+    - canAttack: true
+      hop: BR
+    - canAttack: true
+      hop: BRR
+    - slide: FR
+    - hop: RRR
+placement: 2112 2222 2222
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    7: 1,2

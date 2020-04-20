@@ -1,0 +1,13 @@
+dimensions: 4x10
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: FF
+    - hop: FR
+      if: origin facing F ally
+placement: 0000 0000 1001 1001
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    8: 1,2

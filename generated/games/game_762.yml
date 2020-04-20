@@ -1,0 +1,14 @@
+dimensions: 6x7
+pieces:
+- '1':
+    moves:
+    - leap: F
+    - leap: FR
+    - slide: R
+placement: 111011 111000 111000
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    4: 1,2
+    5: 1,2
+    6: 1,2

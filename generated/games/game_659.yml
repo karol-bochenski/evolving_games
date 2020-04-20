@@ -1,0 +1,23 @@
+dimensions: 3x9
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: BBB
+    - canAttack: true
+      hop: R
+- '2':
+    moves:
+    - leap: F
+    - hop: R
+      if: origin at L empty
+placement: 121 222 222
+player2mirrored: false
+winConditions:
+  and:
+  - piecePlacedAt:
+      5: 1,2,0
+  - piecePlacedAt:
+      5: 0,2
+      6: 0,2
+      7: 0,2

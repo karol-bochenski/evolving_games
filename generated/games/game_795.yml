@@ -1,0 +1,16 @@
+dimensions: 5x8
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: B
+    - slide: R
+    - slide: F
+placement: 11100 01100 01101
+player2mirrored: false
+winConditions:
+  and:
+  - EnemyTotalPiecesLeft: 3
+  - piecePlacedAt:
+      5: 0,1
+      6: 0,1

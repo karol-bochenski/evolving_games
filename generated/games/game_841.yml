@@ -1,0 +1,14 @@
+dimensions: 4x6
+pieces:
+- '1':
+    moves:
+    - leap: BR
+    - slide: F
+- '2':
+    moves:
+    - leap: R
+placement: 2000 1001
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    4: '2'

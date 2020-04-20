@@ -1,0 +1,22 @@
+dimensions: 6x5
+pieces:
+- '1':
+    moves:
+    - slide: B
+    - hop: RR
+- '2':
+    moves:
+    - slide: BR
+    - hop: FRR
+      if: not destination facing B enemy
+    - if: origin at BR ally
+      slide: F
+- '3':
+    moves:
+    - canAttack: true
+      hop: R
+    - leap: FR
+placement: 000000 231132
+player2mirrored: false
+winConditions:
+  EnemyPieceTypeRemoved: 2

@@ -1,0 +1,15 @@
+dimensions: 7x10
+pieces:
+- '1':
+    moves:
+    - if: destination at BR empty
+      slide: R
+    - canAttack: true
+      hop: FF
+placement: 0000000 0000000 0100010
+player2mirrored: false
+winConditions:
+  or:
+  - EnemyTotalPiecesLeft: 1
+  - piecePlacedAt:
+      6: 1,2,3,5,4

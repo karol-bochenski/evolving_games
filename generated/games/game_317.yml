@@ -1,0 +1,19 @@
+dimensions: 9x6
+pieces:
+- '1':
+    moves:
+    - hop: FRR
+    - hop: RR
+    - slide: F
+    - hop: BB
+      if: origin at R ally
+    - hop: R
+- '2':
+    moves:
+    - leap: FR
+placement: 000000000 002111200
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    4: 1,2,7,6
+    5: 1,2,7,6

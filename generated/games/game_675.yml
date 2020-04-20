@@ -1,0 +1,16 @@
+dimensions: 4x10
+pieces:
+- '1':
+    moves:
+    - leap: B
+    - if: destination facing R enemy
+      leap: F
+    - leap: BR
+placement: 0110 0110 0110 0110
+player2mirrored: true
+winConditions:
+  or:
+  - piecePlacedAt:
+      6: '0'
+      7: '0'
+  - EnemyPieceTypeRemoved: 1

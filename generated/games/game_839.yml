@@ -1,0 +1,13 @@
+dimensions: 6x9
+pieces:
+- '1':
+    moves:
+    - leap: B
+    - if: destination at FL empty
+      leap: R
+    - canAttack: true
+      hop: FF
+placement: 110011 111111 110011 110011
+player2mirrored: true
+winConditions:
+  EnemyPieceTypeRemoved: 1

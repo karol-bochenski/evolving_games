@@ -1,0 +1,37 @@
+dimensions: 3x10
+pieces:
+- '1':
+    moves:
+    - if: origin facing B empty
+      slide: R
+- '2':
+    moves:
+    - if: origin facing F enemy
+      slide: FR
+    - leap: R
+    - leap: F
+    - leap: BR
+- '3':
+    moves:
+    - leap: R
+    - hop: F
+- '4':
+    moves:
+    - canAttack: true
+      hop: BRR
+    - slide: R
+    - canAttack: true
+      hop: FR
+- '5':
+    moves:
+    - slide: R
+- '6':
+    moves:
+    - slide: R
+    - leap: F
+placement: 050 262 131 141
+player2mirrored: false
+winConditions:
+  or:
+  - EnemyPieceTypeRemoved: 1
+  - EnemyTotalPiecesLeft: 5

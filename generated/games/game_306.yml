@@ -1,0 +1,19 @@
+dimensions: 10x5
+pieces:
+- '1':
+    moves:
+    - hop: RRR
+    - canAttack: true
+      hop: R
+    - canAttack: true
+      hop: FRR
+placement: 1111111111 1110110111
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      3: 0,1,2,9,8,7
+      4: 0,1,2,9,8,7
+  - piecePlacedAt:
+      3: 0,1,2,3,4,9,8,7,6,5
+      4: 0,1,2,3,4,9,8,7,6,5

@@ -1,0 +1,22 @@
+dimensions: 3x5
+pieces:
+- '1':
+    moves:
+    - hop: RRR
+      if: origin at BL empty
+    - hop: B
+    - canAttack: true
+      hop: R
+- '2':
+    moves:
+    - hop: FR
+    - canAttack: true
+      hop: FFR
+placement: 011 212
+player2mirrored: true
+winConditions:
+  or:
+  - EnemyTotalPiecesLeft: 1
+  - piecePlacedAt:
+      3: '2'
+      4: '2'

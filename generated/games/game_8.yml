@@ -1,0 +1,14 @@
+dimensions: 9x5
+pieces:
+- '1':
+    moves:
+    - hop: RR
+    - slide: FR
+placement: 110000011 110000001
+player2mirrored: true
+winConditions:
+  or:
+  - EnemyTotalPiecesLeft: 1
+  - piecePlacedAt:
+      3: 0,1
+      4: 1,0

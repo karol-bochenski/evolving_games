@@ -1,0 +1,11 @@
+dimensions: 9x8
+pieces:
+- '1':
+    moves:
+    - slide: R
+    - slide: B
+    - slide: F
+placement: 001111100 000111000 100000001
+player2mirrored: false
+winConditions:
+  EnemyPieceTypeRemoved: 1

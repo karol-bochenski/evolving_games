@@ -1,0 +1,40 @@
+dimensions: 4x8
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: FRR
+      if: origin at R ally
+    - leap: B
+- '2':
+    moves:
+    - leap: R
+    - leap: BR
+- '3':
+    moves:
+    - leap: F
+    - leap: BR
+    - slide: R
+- '4':
+    moves:
+    - canAttack: true
+      hop: F
+- '5':
+    moves:
+    - slide: BR
+    - hop: RR
+    - canAttack: true
+      hop: R
+    - hop: BRR
+placement: 0335 1052 4454
+player2mirrored: false
+winConditions:
+  or:
+  - piecePlacedAt:
+      5: '0'
+      6: '0'
+      7: '0'
+  - piecePlacedAt:
+      5: 2,3
+      6: 2,3
+      7: 2,3

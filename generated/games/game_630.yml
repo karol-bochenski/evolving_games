@@ -1,0 +1,19 @@
+dimensions: 3x5
+pieces:
+- '1':
+    moves:
+    - slide: FR
+    - canAttack: true
+      hop: RRR
+    - canAttack: true
+      hop: FFR
+    - canAttack: true
+      hop: R
+placement: 101 111
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      3: 2,0
+      4: 2,0
+  - EnemyPieceTypeRemoved: 1

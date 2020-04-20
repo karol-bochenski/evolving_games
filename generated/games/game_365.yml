@@ -1,0 +1,20 @@
+dimensions: 9x10
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: R
+      if: origin at R enemy
+- '2':
+    moves:
+    - slide: R
+- '3':
+    moves:
+    - slide: R
+    - canAttack: true
+      hop: FRR
+    - hop: BBB
+placement: 220333330 220333320 312222213 323222323
+player2mirrored: true
+winConditions:
+  EnemyPieceTypeRemoved: 1

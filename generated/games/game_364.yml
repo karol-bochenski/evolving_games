@@ -1,0 +1,23 @@
+dimensions: 8x9
+pieces:
+- '1':
+    moves:
+    - hop: FF
+    - hop: BB
+    - hop: FFF
+    - slide: R
+- '2':
+    moves:
+    - hop: BBB
+    - hop: R
+    - hop: FRR
+placement: 11222211 10022211 10022211 01112211
+player2mirrored: false
+winConditions:
+  or:
+  - piecePlacedAt:
+      7: 0,1,2,3,4,5,6,7
+      8: 0,1,2,3,4,5,6,7
+  - piecePlacedAt:
+      5: 0,1,2,3,4
+      6: 0,1,2,3,4

@@ -1,0 +1,28 @@
+dimensions: 10x8
+pieces:
+- '1':
+    moves:
+    - hop: BR
+      if: not origin at FL ally
+    - hop: FR
+    - canAttack: true
+      hop: B
+- '2':
+    moves:
+    - hop: R
+- '3':
+    moves:
+    - slide: F
+    - hop: RRR
+- '4':
+    moves:
+    - canAttack: true
+      hop: BBR
+    - hop: F
+    - canAttack: true
+      hop: B
+    - slide: R
+placement: 0003113000 0002442000
+player2mirrored: false
+winConditions:
+  EnemyPieceTypeRemoved: 3

@@ -1,0 +1,20 @@
+dimensions: 5x7
+pieces:
+- '1':
+    moves:
+    - hop: FRR
+- '2':
+    moves:
+    - slide: BR
+    - slide: R
+- '3':
+    moves:
+    - leap: FR
+    - slide: R
+placement: 02120 00000 03330
+player2mirrored: true
+winConditions:
+  and:
+  - EnemyPieceTypeRemoved: 2
+  - piecePlacedAt:
+      5: '2'

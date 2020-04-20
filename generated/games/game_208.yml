@@ -1,0 +1,21 @@
+dimensions: 4x8
+pieces:
+- '1':
+    moves:
+    - slide: BR
+    - canAttack: true
+      hop: RR
+    - canAttack: true
+      hop: BRR
+- '2':
+    moves:
+    - hop: RRR
+      if: not origin facing BL ally
+    - canAttack: true
+      hop: FF
+    - hop: BR
+    - leap: R
+placement: 0000 2111 2111
+player2mirrored: false
+winConditions:
+  EnemyPieceTypeRemoved: 2

@@ -1,0 +1,16 @@
+dimensions: 6x7
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: F
+placement: 010010 010010 010010
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      6: 1,4
+  - piecePlacedAt:
+      4: 4,1
+      5: 4,1
+      6: 4,1

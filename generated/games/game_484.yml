@@ -1,0 +1,36 @@
+dimensions: 9x9
+pieces:
+- '1':
+    moves:
+    - leap: R
+    - leap: F
+- '2':
+    moves:
+    - leap: FR
+    - leap: R
+    - canAttack: true
+      hop: BB
+- '3':
+    moves:
+    - leap: R
+- '4':
+    moves:
+    - leap: F
+- '5':
+    moves:
+    - canAttack: true
+      hop: FF
+    - hop: R
+      if: origin facing FL enemy
+- '6':
+    moves:
+    - leap: B
+    - slide: F
+    - hop: BRR
+placement: 021556146 055556666 033336666 333336666
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    6: 4,5,6,7,8
+    7: 4,5,6,7,8
+    8: 4,5,6,7,8

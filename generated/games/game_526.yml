@@ -1,0 +1,17 @@
+dimensions: 6x6
+pieces:
+- '1':
+    moves:
+    - slide: R
+    - hop: FRR
+    - slide: F
+- '2':
+    moves:
+    - leap: R
+placement: 110011 210012
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      5: 0,1,5,4
+  - EnemyTotalPiecesLeft: 4

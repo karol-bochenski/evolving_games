@@ -1,0 +1,15 @@
+dimensions: 9x10
+pieces:
+- '1':
+    moves:
+    - leap: F
+    - leap: FR
+- '2':
+    moves:
+    - hop: F
+    - leap: R
+    - hop: RRR
+placement: 000001110 000001110 002001210 000011110
+player2mirrored: false
+winConditions:
+  EnemyPieceTypeRemoved: 2

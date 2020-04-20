@@ -1,0 +1,17 @@
+dimensions: 9x10
+pieces:
+- '1':
+    moves:
+    - slide: R
+    - canAttack: true
+      hop: BBB
+    - hop: FFR
+placement: 000001110 000000010 001000010 001000010
+player2mirrored: true
+winConditions:
+  and:
+  - EnemyTotalPiecesLeft: 3
+  - piecePlacedAt:
+      6: 4,5
+      7: 4,5
+      8: 4,5

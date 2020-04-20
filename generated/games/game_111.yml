@@ -1,0 +1,24 @@
+dimensions: 4x6
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: FF
+    - slide: BR
+- '2':
+    moves:
+    - slide: FR
+    - hop: BB
+    - hop: R
+- '3':
+    moves:
+    - slide: FR
+    - slide: R
+    - if: origin facing FL empty
+      slide: BR
+placement: 3113 3223
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    4: 1,2
+    5: 1,2

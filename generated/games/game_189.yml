@@ -1,0 +1,16 @@
+dimensions: 4x10
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: FFR
+    - canAttack: true
+      hop: RRR
+placement: 0001 0000 0000 0001
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      6: 1,2
+      7: 1,2
+  - EnemyTotalPiecesLeft: 1

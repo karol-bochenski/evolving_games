@@ -1,0 +1,21 @@
+dimensions: 9x5
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: FF
+    - leap: R
+- '2':
+    moves:
+    - hop: R
+    - hop: BB
+      if: destination at L enemy
+- '3':
+    moves:
+    - hop: BRR
+placement: 012000010 000232333
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    3: 0,1,2,3
+    4: 0,1,2,3

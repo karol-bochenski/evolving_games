@@ -1,0 +1,25 @@
+dimensions: 6x5
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: R
+    - hop: FFR
+    - canAttack: true
+      hop: RRR
+- '2':
+    moves:
+    - if: origin at BL empty
+      leap: R
+    - hop: BRR
+    - leap: F
+    - leap: BR
+placement: 110011 120021
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      4: 3,4,5,2,1,0
+  - piecePlacedAt:
+      3: 4,1
+      4: 4,1

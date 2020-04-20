@@ -1,0 +1,26 @@
+dimensions: 4x9
+pieces:
+- '1':
+    moves:
+    - leap: B
+    - canAttack: true
+      hop: FR
+- '2':
+    moves:
+    - leap: R
+    - leap: F
+- '3':
+    moves:
+    - leap: R
+- '4':
+    moves:
+    - hop: RR
+      if: origin at BL enemy
+    - if: origin facing F ally
+      leap: FR
+placement: 0110 0440 0220 0330
+player2mirrored: false
+winConditions:
+  and:
+  - EnemyPieceTypeRemoved: 3
+  - EnemyTotalPiecesLeft: 2

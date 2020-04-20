@@ -1,0 +1,30 @@
+dimensions: 4x7
+pieces:
+- '1':
+    moves:
+    - slide: FR
+- '2':
+    moves:
+    - slide: F
+    - hop: R
+- '3':
+    moves:
+    - canAttack: true
+      hop: F
+    - hop: R
+- '4':
+    moves:
+    - canAttack: true
+      hop: RR
+    - slide: F
+- '5':
+    moves:
+    - leap: BR
+    - slide: B
+    - canAttack: true
+      hop: F
+    - hop: FRR
+placement: 0443 2113 5225
+player2mirrored: true
+winConditions:
+  EnemyTotalPiecesLeft: 1

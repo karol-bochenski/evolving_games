@@ -1,0 +1,22 @@
+dimensions: 9x6
+pieces:
+- '1':
+    moves:
+    - canAttack: true
+      hop: BRR
+    - canAttack: true
+      hop: FR
+- '2':
+    moves:
+    - canAttack: true
+      hop: BBB
+    - canAttack: true
+      hop: BRR
+    - canAttack: true
+      hop: FR
+placement: 222222200 120000000
+player2mirrored: true
+winConditions:
+  piecePlacedAt:
+    4: 0,1,2,3,4,5
+    5: 0,1,2,3,4,5

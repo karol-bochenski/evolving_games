@@ -1,0 +1,12 @@
+dimensions: 5x5
+pieces:
+- '1':
+    moves:
+    - leap: F
+    - slide: R
+    - hop: BBR
+placement: 11111 11011
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    3: 0,1,4,3

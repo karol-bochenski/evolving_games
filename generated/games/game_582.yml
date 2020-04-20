@@ -1,0 +1,22 @@
+dimensions: 10x5
+pieces:
+- '1':
+    moves:
+    - if: destination at FR empty
+      slide: R
+    - canAttack: true
+      hop: FRR
+- '2':
+    moves:
+    - hop: RR
+- '3':
+    moves:
+    - if: origin facing FR enemy
+      leap: R
+placement: 0223333220 0023113200
+player2mirrored: false
+winConditions:
+  or:
+  - EnemyTotalPiecesLeft: 3
+  - piecePlacedAt:
+      4: 0,1,2,3,4,9,8,7,6,5

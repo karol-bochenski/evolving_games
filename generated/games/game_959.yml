@@ -1,0 +1,25 @@
+dimensions: 6x10
+pieces:
+- '1':
+    moves:
+    - if: origin at FR ally
+      leap: F
+- '2':
+    moves:
+    - leap: F
+    - leap: FR
+- '3':
+    moves:
+    - hop: RRR
+    - hop: FF
+    - canAttack: true
+      hop: F
+    - slide: FR
+placement: 200002 300003 100001 200002
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    6: 2,3,4,5
+    7: 2,3,4,5
+    8: 2,3,4,5
+    9: 2,3,4,5

@@ -1,0 +1,14 @@
+dimensions: 4x7
+pieces:
+- '1':
+    moves:
+    - hop: FF
+      if: destination at F empty
+    - canAttack: true
+      hop: BR
+    - slide: B
+    - hop: F
+placement: 0000 1000 1000
+player2mirrored: false
+winCondition:
+  EnemyPieceTypeRemoved: 1

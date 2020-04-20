@@ -1,0 +1,20 @@
+dimensions: 3x10
+pieces:
+- '1':
+    moves:
+    - hop: F
+    - canAttack: true
+      hop: RRR
+- '2':
+    moves:
+    - leap: R
+    - slide: F
+placement: 112 102 110
+player2mirrored: false
+winConditions:
+  or:
+  - piecePlacedAt:
+      9: 0,1
+  - piecePlacedAt:
+      6: '0'
+      7: '0'

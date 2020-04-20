@@ -1,0 +1,13 @@
+dimensions: 3x8
+pieces:
+- '1':
+    moves:
+    - if: destination facing R enemy
+      slide: F
+    - hop: R
+    - slide: BR
+    - hop: FRR
+placement: 111 111 111
+player2mirrored: false
+winConditions:
+  EnemyTotalPiecesLeft: 1

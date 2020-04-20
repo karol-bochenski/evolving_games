@@ -1,0 +1,15 @@
+dimensions: 4x8
+pieces:
+- '1':
+    moves:
+    - hop: B
+    - if: origin facing R enemy
+      slide: FR
+    - slide: R
+    - leap: F
+placement: 1111 0110
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    5: 0,1,3,2
+    6: 0,1,3,2

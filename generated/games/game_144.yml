@@ -1,0 +1,15 @@
+dimensions: 5x10
+pieces:
+- '1':
+    moves:
+    - hop: F
+      if: origin at FR enemy
+    - canAttack: true
+      hop: RR
+    - slide: B
+    - canAttack: true
+      hop: FFR
+placement: 00100 00100 00100 00100
+player2mirrored: true
+winConditions:
+  EnemyPieceTypeRemoved: 1

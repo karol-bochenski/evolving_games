@@ -1,0 +1,30 @@
+dimensions: 3x9
+pieces:
+- '1':
+    moves:
+    - leap: B
+    - hop: BR
+    - slide: F
+    - if: destination facing L empty
+      leap: FR
+- '2':
+    moves:
+    - hop: RRR
+    - hop: R
+    - if: destination facing FL enemy
+      slide: BR
+    - slide: B
+- '3':
+    moves:
+    - leap: F
+    - hop: BBR
+- '4':
+    moves:
+    - hop: FR
+    - hop: B
+    - hop: RR
+    - hop: R
+placement: 040 030 010 222
+player2mirrored: false
+winConditions:
+  EnemyTotalPiecesLeft: 3

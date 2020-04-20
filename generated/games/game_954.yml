@@ -1,0 +1,18 @@
+dimensions: 5x6
+pieces:
+- '1':
+    moves:
+    - slide: FR
+    - canAttack: true
+      hop: BRR
+    - leap: B
+placement: 11101 10000
+player2mirrored: true
+winConditions:
+  and:
+  - piecePlacedAt:
+      4: 0,1,2
+      5: 0,1,2
+  - piecePlacedAt:
+      4: 2,3,4
+      5: 2,3,4

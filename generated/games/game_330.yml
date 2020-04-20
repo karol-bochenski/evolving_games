@@ -1,0 +1,32 @@
+dimensions: 10x9
+pieces:
+- '1':
+    moves:
+    - hop: FF
+    - slide: FR
+    - leap: B
+    - hop: FFR
+    - hop: RR
+- '2':
+    moves:
+    - hop: FRR
+      if: destination facing BR empty
+- '3':
+    moves:
+    - hop: RR
+    - hop: FRR
+    - slide: F
+- '4':
+    moves:
+    - if: origin facing FL empty
+      slide: BR
+    - slide: R
+    - if: origin facing R enemy
+      leap: F
+- '5':
+    moves:
+    - slide: F
+placement: 4000000000 0333220033 0243550420 0333110004
+player2mirrored: true
+winConditions:
+  EnemyPieceTypeRemoved: 4
