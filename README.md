@@ -52,4 +52,4 @@
     - win if 2 or more specified squares on the boards are taken by a player
 
 
- - More information, with usage and explanations can be found in this [jupyter notebook](demo .ipynb)
+ - More information, with usage and explanations can be found in this [jupyter notebook](demo.ipynb)
