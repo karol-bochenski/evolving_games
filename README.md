@@ -2,6 +2,13 @@
  
  This project serves as a research part my bachelors thesis, in which i'm trying to use evolutionary algorithms to generate and evaluate playable and interesting board games.
 
+### Dependencies
+ - python3.6 (or preferably pypy https://www.pypy.org/download.html for better performance)
+   - PyYAML and PyGame libraries
+
+### Running
+ - preferably in jupyter notebook, as shown [here](demo.ipynb)
+ 
 ## Searchable space
 - dimension of table, rectangular
 - types of pawns
@@ -52,4 +59,4 @@
     - win if 2 or more specified squares on the boards are taken by a player
 
 
- - More information, with usage and explanations can be found in this [jupyter notebook](demo .ipynb)
+ - More information, with usage and explanations can be found in this [jupyter notebook](demo.ipynb)
