@@ -129,7 +129,7 @@ def fromDict(conditionDict):
     target_squares = []
     for rowNr, row in value.items():
         for ch in row.split(","):
-            target_squares.append((int(rowNr), int(ch)))
+            target_squares.append((int(ch), int(rowNr)))
     return PieceIsPlacedAt(target_squares)
 
 winConditionFromDict = fromDict

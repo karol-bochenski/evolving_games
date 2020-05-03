@@ -1,5 +1,6 @@
 import pygame
 from pygame.locals import *
+from mcts.alphabeta import AlphaBeta
 from game_elements.player import Player
 from graphics.boardRenderer import BoardRenderer
 from graphics.descriptionRenderer import DecriptionRenderer
@@ -40,14 +41,17 @@ class App:
             self.selected = position
         
     def playout(self):
-        Thread(target=self.on_execute).start()
+        Thread(target=self.on_execute, daemon=True).start()
+        alpha = AlphaBeta(self.game_state.game)
         while not self.game_state.finished and self._running:
             agent = self.currentAgent()
             if agent == "USER":
                 sleep(1/60)
                 continue
             if agent == "MCTS":
-                self.game_state = mcts.findNextMove(self.game_state).game_state    
+                self.game_state = mcts.findNextMove(self.game_state).game_state
+            if agent == "MINMAX":
+                self.game_state = alpha.findBestMove(self.game_state)
         self.finished = True
 
     def addWidget(self, widget, position):
@@ -120,7 +124,7 @@ def startApp(game, player1agent, player2agent):
     theApp.playout()
 
 def startGameThread(game, player1agent, player2agent):
-    thread = Thread(target=startApp, args=[game, player1agent,player2agent])
+    thread = Thread(target=startApp, args=[game, player1agent,player2agent], daemon=True)
     thread.start()
     return thread
 

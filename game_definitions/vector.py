@@ -1,7 +1,14 @@
+import copy
 
 class Vector(tuple): # 
-    def __new__(self, x, y):
-        return tuple.__new__(Vector, (x, y))
+    def __new__(self, x, yyy):
+        return tuple.__new__(Vector, (x, yyy))
+
+    def __copy__(self):
+        return Vector(self.x, self.y)
+
+    def __deepcopy__(self,memo):
+        return Vector(self.x, self.y)
 
     @property
     def x(self):

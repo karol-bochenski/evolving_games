@@ -1,26 +1,25 @@
 from game_elements.player import Player
+from game_definitions.heuristicValueEvaluator import HeuristicCalculator
 
 class AlphaBeta:
-    def __init__(self):
-        self.traversed_states = {}
+    def __init__(self, game):
+        self.heuristicCalc = HeuristicCalculator(game)
 
     def findBestMove(self, game_state):
-        return self.alphaBeta(game_state, False, -2, 2, 8)
+        maximizePlayer1 = game_state.currentPlayer == Player.P1
+        return self.alphaBeta(game_state, maximizePlayer1, -5000, 5000, 3)[1]
 
     def alphaBeta(self, game_state, ismin, alpha, beta, depth):
         if (depth == 0):
-            return 0,game_state
+            value = self.heuristicCalc.calculate(game_state) 
+            return value[1] - value[0],game_state
         if(game_state.winner is not None):
-            return (1,game_state) if (game_state.winner == Player.P2) else (-1, game_state)
+            return (2000,game_state) if (game_state.winner == Player.P2) else (-2000, game_state)
         retstate = None
         if(ismin):
-            mval = 2
+            mval = 999999
             for state in game_state.possibleStates:
-                if (state,ismin) in self.traversed_states:
-                    beta = self.traversed_states[(state, ismin)]
-                else:
-                    beta, _ = self.alphaBeta(state, True, alpha, beta, depth - 1)
-                    self.traversed_states[(state, ismin)] = beta
+                beta, _ = self.alphaBeta(state, True, alpha, beta, depth - 1)
                 if(beta < mval):
                     mval = beta
                     retstate = state
@@ -28,13 +27,9 @@ class AlphaBeta:
                     break
             return beta, retstate
         else:
-            mval = -2
+            mval = -999999
             for state in game_state.possibleStates:
-                if (state,ismin) in self.traversed_states:
-                    alpha = self.traversed_states[(state, ismin)]
-                else:
-                    alpha, _ = self.alphaBeta(state, False, alpha, beta, depth - 1)
-                    self.traversed_states[(state, ismin)] = alpha
+                alpha, _ = self.alphaBeta(state, False, alpha, beta, depth - 1)
                 if(alpha > mval):
                     mval = alpha
                     retstate = state

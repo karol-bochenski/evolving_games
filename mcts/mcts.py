@@ -39,7 +39,7 @@ class UCTNode():
             game_state._possibleMoves = None
             moves = game_state.possibleMoves
             moveInfo = random.choice(moves)
-            game_state = game_state.applyMove_(moveInfo)
+            game_state = game_state.applyMove(moveInfo)
         return game_state.winner
 
     def expand_node(self):

@@ -4,16 +4,14 @@ from game_definitions import move_conditions
 from .vector import Vector
 
 class Move:
-    def __init__(self, origin, destination, game_state, apply_func):
+    def __init__(self, origin, destination, apply_func):
         self.origin = origin
         self.destination = destination
         self.apply_func = apply_func
-        self.game_state = game_state
 
-    def apply(self):
-        newState = self.game_state.copy()
-        self.apply_func(self.origin, self.destination, newState.board)
-        return newState.nextRound()
+    def apply(self, state):
+        self.apply_func(self.origin, self.destination, state.board)
+        state.nextRound()
 
 class Hop:
     def __init__(self, destination, can_attack=False, condition=None):
@@ -33,8 +31,7 @@ class Hop:
             board.movePiece(origin, destination)
         return f
 
-    def validMoves(self, game_state, origin):
-        board = game_state.board
+    def validMoves(self, board, origin):
         destination = origin + self.direction
         if not board.contains(destination):
             return []
@@ -44,8 +41,11 @@ class Hop:
             return []
         if not self.can_attack and ~orig_square.owner == dest_square.owner: #If move is not an attacking one then cannot move to enemy square
             return []
-        move = Move(origin, destination, game_state, self.apply())
-        if self.condition and not self.condition.check(board, move):
+        move = Move(origin, destination, self.apply())
+        if self.condition:
+            conditionPassed = self.condition.check(board, move)
+            if conditionPassed:
+                return [move]
             return []
         return [move]
 
@@ -84,18 +84,25 @@ class Slide:
             board.movePiece(origin, destination)
         return f
 
-    def validMoves(self, game_state, origin):
-        board = game_state.board
+    def validMoves(self, board, origin):
         moves = []
         current_square = origin + self.direction
         while (board.contains(current_square) and board[current_square].owner is None):
-            move = Move(origin, current_square, game_state, self.apply())
-            if (not self.condition) or (self.condition and self.condition.check(board, move)):
+            move = Move(origin, current_square, self.apply())
+            if self.condition:
+                result = self.condition.check(board.move)
+                if result:
+                    moves.append(move)
+            else:
                 moves.append(move)
             current_square = current_square + self.direction
         if(board[current_square].owner == ~board[origin].owner):
-            move = Move(origin, current_square, game_state, self.apply())
-            if (not self.condition) or (self.condition and self.condition.check(board, move)):
+            move = Move(origin, current_square, self.apply())
+            if self.condition:
+                result = self.condition.check(board, move)
+                if result:
+                    moves.append(move)
+            else:
                 moves.append(move)
         return moves
 
@@ -134,13 +141,16 @@ class Leap:
             board.movePiece(origin, destination)
         return f
 
-    def validMoves(self, game_state, origin):
-        board = game_state.board
+    def validMoves(self, board, origin):
         current_square = origin + (self.direction * 2)
         if(board.contains(current_square) and board[current_square].owner is None):
-            move = Move(origin, current_square, game_state, self.apply())
-            if (not self.condition) or (self.condition and not self.condition.check(board, move)):
-              return [move]
+            move = Move(origin, current_square, self.apply())
+            if self.condition:
+                result = self.condition.check(board, move)
+                if result:
+                    return [move]
+                return []
+            return [move]
         return []
 
     def heuristicValue(self):

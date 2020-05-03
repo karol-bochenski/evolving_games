@@ -13,8 +13,7 @@ class BoardGenerator():
         player1Pieces = self.ensureNoMajority(player1Pieces)
         player1Pieces = self.ensureAllPiecesUsed(player1Pieces)
         player2mirrored = random.choice([True, False])
-        player2Pieces = self.mirrorBoard(player1Pieces, x_axis=True, y_axis=player2mirrored)
-        board = Board(self.x,self.y, [(Player.P1, player1Pieces),(Player.P2, player2Pieces)])
+        board = Board(self.x,self.y, player1Pieces, player2mirrored)
         return board, player2mirrored
 
     def mirrorBoard(self, points, x_axis=False, y_axis=False):

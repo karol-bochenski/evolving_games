@@ -23,6 +23,7 @@ class BoardGame():
 
     def __init__(self, board, player2mirrored, listOfPieces, winConditions):
         self.initialBoard = board
+        self.initialBoard.game = self
         self.isPlayer2mirrored = player2mirrored
         self.piece_types   = { Player.P1:listOfPieces,  Player.P2:self.invertPieces(listOfPieces) }
         self.winConditions = { Player.P1:winConditions, Player.P2:self.invertConditions(winConditions) }
@@ -72,8 +73,7 @@ class BoardGame():
         player2mirrored = gameDefinitionDict["player2mirrored"]
         pieceTypes = [None] + [ Piece.fromDict(pieceDefinitionDict) for pieceDefinitionDict in gameDefinitionDict["pieces"] ]
         player1placements = { (a,b):int(id) for b,row in enumerate(gameDefinitionDict["placement"].split(" ")) for a,id in enumerate(row) if id != '0'}
-        player2placements = { (width-a-1 if player2mirrored else a,height - b - 1):int(id) for (a,b),id in player1placements.items() }
-        board = Board(width, height, [(Player.P1, player1placements), (Player.P2, player2placements)])
+        board = Board(width, height, player1placements, player2mirrored)
         winCondition = winConditionFromDict(gameDefinitionDict["winConditions"])
         return BoardGame(board,player2mirrored, pieceTypes, winCondition)
 
@@ -92,7 +92,7 @@ class GameState():
     """
     def __init__(self, game, board, player = Player.P1, round_count=0):
         self.game = game
-        self.board = copy(board)
+        self.board = deepcopy(board)
         self.currentPlayer = player
         self.round_count = round_count
         self._possibleStates = None
@@ -109,21 +109,19 @@ class GameState():
 
     @property
     def possibleStates(self):
-        if self._possibleStates is None:
-            if(not self.winner is None):
-                return []
-            states = []
-            for move in self.possibleMoves:
-                states.append(self.applyMove(move))
-            self._possibleStates = states
-        return self._possibleStates
+        if(not self.winner is None):
+            return []
+        states = []
+        for move in self.possibleMoves:
+            states.append(self.applyMove(move))
+        return states
 
     @property
     def possibleMoves(self):
         if self._possibleMoves is None:
             possibleMoves = [] 
-            for position, piece in self.getCurrentPlayersPieces():
-                for move in piece.getLegalMoves(self, position):
+            for piece in self.getCurrentPlayersPieces():
+                for move in piece.getLegalMoves():
                     possibleMoves.append(move)
             self._possibleMoves = possibleMoves
         return self._possibleMoves
@@ -152,21 +150,20 @@ class GameState():
 
     def getPiecesForPlayer(self, player):
         pieces = []
-        for position, square in self.board.iterate():
+        for square in self.board.iterate():
             if square.owner == player:
-                piece = self.game.piece_types[player][square.piece]
-                pieces.append((position,piece))
+                pieces.append(square)
         return pieces
 
     def applyMove(self, moveInfo):
         """Function that applies specified move to the current game state and returns new game state, thread-safe but slow"""
-        state = self.applyMove_(moveInfo)
-        return state
+        newState = self.copy()
+        newState.applyMove_(moveInfo)
+        return newState 
 
     def applyMove_(self, moveInfo):
         """Function that applies specified move to the current game state and returns new game state, thread-safe but slow"""
-        state = moveInfo.apply()
-        return state
+        moveInfo.apply(self)
 
     def nextRound(self):
         self.currentPlayer = ~self.currentPlayer
