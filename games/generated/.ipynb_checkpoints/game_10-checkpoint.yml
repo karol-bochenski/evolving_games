@@ -1,0 +1,12 @@
+dimensions: 8x8
+pieces:
+- '1':
+    moves:
+    - hop: F
+    - hop: FR
+      canAttack: true
+placement: 11111111 11111111
+player2mirrored: false
+winConditions:
+  piecePlacedAt:
+    7: 0,1,2,3,4,5,6,7
